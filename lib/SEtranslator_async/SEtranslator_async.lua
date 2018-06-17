@@ -80,9 +80,7 @@ function send_udp(sedl)
 end
 
 
--- essa função poderia vai ficar em loop infinito até receber a resposta.
--- a princípio faz sentido né, o loop infinito seria a execução do efeito como mídia.
--- com certeza assim não terá nem pause nem stop no meu efeito, já que o lua só vai parar quando receber udp
+-- essa função poderia vai ficar em loop até receber a resposta.
 -- Então uma idéia é usar io assíncrono para tratar isso. Abaixo tem uma implementação do copas (socket assíncrono)
 
 function udp_response_callback()
