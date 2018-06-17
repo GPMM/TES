@@ -200,7 +200,7 @@ function handler(evt)
   if (evt.type == 'presentation') and (evt.label == 'effectInterface') then
     player:presentation(evt)
   elseif (evt.type == 'attribution') then
-    -- TODO: ALTERAR VALOR DAS VARIÁVEIS
+      effect[evt.name] = evt.value
   end
 end
 
