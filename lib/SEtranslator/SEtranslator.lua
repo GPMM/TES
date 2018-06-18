@@ -134,11 +134,7 @@ end
 
 
 function SEplayer:run_queue()
-  -- é preciso fazer alguma coisa antes para ver quem já pode ser disparado
-  -- não sei se vale a pena usar timer ou ficar disparando evento de usuário
-  -- do ncl para ficar gerenciando a fila. Sugestões?
 
-  -- pensei em algo do tipo:
   -- verifica o tempo desde a última chamada de run_queue()
   local current_time = os.time()
   local time_passed = current_time - self.last_run
