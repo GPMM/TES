@@ -175,10 +175,13 @@ function SEplayer:run_queue()
   end
 
   print("--------------> "..self.queue[1][1])
-
+  
   -- depois de disparado o efeitos que deveriam, volta a esperar para uma
   -- nova passada pela lista. Pega o menor valor e gera um timer para
   -- ele. Como a tabela está ordenada, o primeiro tem o menor delay.
+  
+  sleep(1) -- aguardando 1 segundo
+ 
   self.unreg = event.timer(self.queue[1][1]*1000, self:run_queue())
   return
 end
