@@ -39,8 +39,18 @@ function stringExplode(s,sep)
   return output
 end
 
+local clock = os.clock
+function sleep(n)  -- seconds
+  local t0 = clock()
+  while clock() - t0 <= n do end
+end
+
 utils.stringExplode = stringExplode
 utils.has_value = has_value
 utils.tprint = tprint
+utils.sleep = sleep
 
 return utils
+
+
+
